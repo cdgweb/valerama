@@ -1,0 +1,209 @@
+Delivered-To: valerie@cdgwebdesign.com
+Received: by 2002:a05:6358:a045:b0:e0:5f9e:8304 with SMTP id f5csp3069002rwn;
+        Wed, 18 Jan 2023 08:02:13 -0800 (PST)
+X-Google-Smtp-Source: AMrXdXvoh5/mz9ghjGl0zB9SP0HDvWz7pocNjetwW+HBa+xsv/Ua0EZy2oTeLBf6Zk9bqT0woJQ+
+X-Received: by 2002:a17:90a:4d8e:b0:223:fa53:b368 with SMTP id m14-20020a17090a4d8e00b00223fa53b368mr7996897pjh.34.1674057733301;
+        Wed, 18 Jan 2023 08:02:13 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1674057733; cv=none;
+        d=google.com; s=arc-20160816;
+        b=apdemQ2KBxj5a9zelljKYwrIjm459iWuE08BUlWFh6kdXjiwLn51Y4mJJPvpUY9JGo
+         pDo38rNbM8AcvvYotw4EXSfzh+Y+TLjooGJUgh/I/HHqTCetWEIihwDPutxYA6M2rQkV
+         7lsOnjS9u53WsTMSEJrW/NgGmNs/Q6cmZE7OZwefuVnrCartEwpJTFzcVyrvbMSF1thL
+         15g8IFjekO/J0YEf1ZakC1LuCxFQZCmZSu1oz1hZcEUeGveFocxQ2yPea4rk040WoCIb
+         SxVZbL4X8Tx9Gjv85nAcVBpNnkID7WYxHVHVF9dKh9f7Nxd6SQEs/ZzS8LxXkVc1gGwY
+         5owg==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=to:reply-to:subject:mime-version:from:date
+         :content-transfer-encoding:dkim-signature:message-id;
+        bh=o5YimQjR+UT+Af7kTdLW432ieiwZeDXmK+dvL2xlKI4=;
+        b=oLCeTQZjVfqF/gpcdWMI42tvGlOkGXt+8sQK9zwXjuBm85CisvZM38AluC7ElAUKqJ
+         OBjqVhJIJPiYikjhiU68vlGxT/gZYTzp18ReXsiKj0GbmW62wuLqpgiS1QLxZbYQmK2f
+         NpL5M+lSQeuUPCQuiw/xFcKuO3O11PVLpbzT58Brpm7PXxNSvZc2G3x9ehpucmNzqCvb
+         BGFC2ddf32mmVcU1+HtXY5p1w958fzlcY+XZgwjO9Hna7qXIpiNtBXINAXndpaQaZ426
+         RqnEGNDmQNGaKhOJaXvtNVrOpG3GgdM6ubRnRZZesGDs5sxoiMDOv0RrHXdfIK7G38bG
+         l9eQ==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@sendgrid.net header.s=smtpapi header.b=YDHSxHgn;
+       spf=pass (google.com: domain of bounces+10493795-833c-valerie=cdgwebdesign.com@sendgrid.net designates 50.31.63.80 as permitted sender) smtp.mailfrom="bounces+10493795-833c-valerie=cdgwebdesign.com@sendgrid.net"
+Return-Path: <bounces+10493795-833c-valerie=cdgwebdesign.com@sendgrid.net>
+Received: from o50316380.outbound-mail.sendgrid.net (o50316380.outbound-mail.sendgrid.net. [50.31.63.80])
+        by mx.google.com with ESMTPS id om10-20020a17090b3a8a00b00223770a1235si2827142pjb.138.2023.01.18.08.02.13
+        for <valerie@cdgwebdesign.com>
+        (version=TLS1_3 cipher=TLS_AES_128_GCM_SHA256 bits=128/128);
+        Wed, 18 Jan 2023 08:02:13 -0800 (PST)
+Received-SPF: pass (google.com: domain of bounces+10493795-833c-valerie=cdgwebdesign.com@sendgrid.net designates 50.31.63.80 as permitted sender) client-ip=50.31.63.80;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@sendgrid.net header.s=smtpapi header.b=YDHSxHgn;
+       spf=pass (google.com: domain of bounces+10493795-833c-valerie=cdgwebdesign.com@sendgrid.net designates 50.31.63.80 as permitted sender) smtp.mailfrom="bounces+10493795-833c-valerie=cdgwebdesign.com@sendgrid.net"
+Message-ID: <63c81805.170a0220.5152.bc8dSMTPIN_ADDED_BROKEN@mx.google.com>
+X-Google-Original-Message-ID: b970368d9b31fa5aef20921ba71a0f14@wordpress-237898-2491818.cloudwaysapps.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=sendgrid.net;
+	h=content-transfer-encoding:content-type:from:mime-version:subject:
+	reply-to:to:cc:content-type:from:subject:to;
+	s=smtpapi; bh=o5YimQjR+UT+Af7kTdLW432ieiwZeDXmK+dvL2xlKI4=;
+	b=YDHSxHgnJGnVkK0y6GVvsKRitAjUA/Grx5gXanl9BbeTxuWlw1U2JeJRpTccRqeSwpc7
+	ujLQM90LRFKZofCkEFVjT0YenI9t+0rub5RH/poqh9D5Oe/7IxZXhKTPpe+PSz1dMObSOW
+	abOsEajJy/I9qkU293VzGAHrc0Hpw6b0Y=
+Received: by filterdrecv-6c4ccfbdd8-wszxs with SMTP id filterdrecv-6c4ccfbdd8-wszxs-1-63C81804-95
+        2023-01-18 16:02:12.624581793 +0000 UTC m=+5331395.056321830
+Received: from MTA0OTM3OTU (unknown)
+	by geopod-ismtpd-1-2 (SG) with HTTP
+	id u3lnbLfFQ1-L2suCIQbO9Q
+	Wed, 18 Jan 2023 16:02:12.328 +0000 (UTC)
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/html; charset=us-ascii
+Date: Wed, 18 Jan 2023 16:02:12 +0000 (UTC)
+From: WPExperts From Post SMTP Plugin <support@postmansmtp.com>
+Mime-Version: 1.0
+Subject: Your License Key is About to Expire
+Reply-To: uzair@objects.ws
+X-Mailer: Postman SMTP 2.1.8 for WordPress
+ (https://wordpress.org/plugins/post-smtp/)
+X-SG-EID: 
+ =?us-ascii?Q?kwW4NjV4wRRqqmLTsLM1weI4ikY5tS9xJQGYOLaTrVv442thiyCRN7vE+b6pCt?=
+ =?us-ascii?Q?YEsJxzNFGt1W7RtAvExd36hJfc60b3VxpIamjbD?=
+ =?us-ascii?Q?4jgv5a6tBO94pRO+WCnfZ++zgF8sjwXy7Xd87A8?=
+ =?us-ascii?Q?FJ3ftUntPCnUaEdm4KNsmYc0XK17+68DuH+Egc+?=
+ =?us-ascii?Q?rOKZk=2FslPzVAf6zoKqkCiTpYfiaFPCmcergzez7?=
+ =?us-ascii?Q?dpjeuOxqdvJ1kZ=2FLSPBGSRcSTqUT=2Fnl3rM=2FBj0D?=
+ =?us-ascii?Q?vnXANNVB=2Fy69pyD1P7mKfWUT0CuQ8hiuzz2vzLt?=
+ =?us-ascii?Q?L1g=3D?=
+To: valerie@cdgwebdesign.com
+X-Entity-ID: jeb8foQ5x59oHISw0TWq2Q==
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3DUTF-8" =
+/>
+		<title>Post SMTP</title>
+	</head>
+	<body leftmargin=3D"0" marginwidth=3D"0" topmargin=3D"0" marginheight=3D"0=
+" offset=3D"0" style=3D"
+	background-color: #f6f6f6;
+	font-family: 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-ser=
+if;
+">
+		<div style=3D"
+	width:100%;
+	-webkit-text-size-adjust:none !important;
+	margin:0;
+	padding: 70px 0 70px 0;
+">
+		<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" height=3D"100%" w=
+idth=3D"100%">
+			<tr>
+				<td align=3D"center" valign=3D"top">
+										<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"=
+520" id=3D"template_container" style=3D"
+	box-shadow:0 0 0 1px #f3f3f3 !important;
+	border-radius:3px !important;
+	background-color: #ffffff;
+	border: 1px solid #e9e9e9;
+	border-radius:3px !important;
+	padding: 20px;
+">
+												<tr>
+							<td align=3D"center" valign=3D"top">
+								<!-- Body -->
+								<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"52=
+0" id=3D"template_body">
+									<tr>
+										<td valign=3D"top" style=3D"
+	border-radius:3px !important;
+	font-family: 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-ser=
+if;
+">
+											<!-- Content -->
+											<table border=3D"0" cellpadding=3D"20" cellspacing=3D"0" width=
+=3D"100%">
+												<tr>
+													<td valign=3D"top">
+														<div style=3D"
+	color: #000000;
+	font-size:14px;
+	font-family: 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-ser=
+if;
+	line-height:150%;
+	text-align:left;
+"><p>Hello Valerie Cudnik,</p>
+<p>Your license key for  is about to expire.</p>
+<p>If you wish to renew your license, simply click the link below and follo=
+w the instructions.</p>
+<p>Your license expires on: February 18, 2023.</p>
+<p>Your expiring license key is: ae952ecb4b718c95ba6b5cecc5b85436.</p>
+<p>Renew now: <a href=3D"https://u10493795.ct.sendgrid.net/ls/click?upn=3Dm=
+tDFG8Oi2l89e3Aa35gig-2B6qofITEZhF08tRZo8IW7ziekr676c69eXRcu3B4nz4VLQ9D5kRcO=
+jJETRs1Istw3YaTTFBPVvfndFTBH6wFLa6sf4p7IUUX4sZccs5AOugXksu5JTmbwu9xPOKDT11z=
+XI5J1kflrjDqT-2FhZeWuf96syvEl38qKcnZFMzdjEiCni8Jz_wb3luKP73KVYI7TUfNTs5-2Bd=
+zuysSgZgcJRWnkaUmIhyxB8hNAcLszJnY23YO3DHrd9f6ve1It0bNdDOqG5hXAQEuIQTD0RCLpS=
+K924BhAnc3KUh2A2wp6ZedHX7JGgjGIRXe54ky259X19LuU2ikXoQQHeYIa4Mh-2FK4v5pLT0In=
+BoXWl-2BTbOcJZ0nh1QawL35KG4fcuuPvvGWlgUqcppGTIAjXkZYCe3IydRrWuQxGU-3D">http=
+s://wordpress-237898-2491818.cloudwaysapps.com/checkout/?edd_license_key=3D=
+ae952ecb4b718c95ba6b5cecc5b85436&amp;download_id=3D53780</a>.</p>
+
+															</div>
+														</td>
+                                                    </tr>
+                                                </table>
+                                                <!-- End Content -->
+                                            </td>
+                                        </tr>
+                                    </table>
+                                    <!-- End Body -->
+                                </td>
+                            </tr>
+                            <tr>
+                                <td align=3D"center" valign=3D"top">
+                                    <!-- Footer -->
+                                    <table border=3D"0" cellpadding=3D"10" =
+cellspacing=3D"0" width=3D"600" id=3D"template_footer" style=3D"
+	border-top:0;
+	-webkit-border-radius:3px;
+">
+                                        <tr>
+                                            <td valign=3D"top">
+                                                <table border=3D"0" cellpad=
+ding=3D"10" cellspacing=3D"0" width=3D"100%">
+                                                    <tr>
+                                                        <td colspan=3D"2" v=
+align=3D"middle" id=3D"credit" style=3D"
+	border:0;
+	color: #000000;
+	font-family: 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-ser=
+if;
+	font-size:12px;
+	line-height:125%;
+	text-align:center;
+">
+                                                           <p><a href=3D"ht=
+tps://u10493795.ct.sendgrid.net/ls/click?upn=3DmtDFG8Oi2l89e3Aa35gig-2B6qof=
+ITEZhF08tRZo8IW7ziekr676c69eXRcu3B4nz4rsWUdziq2cyR7atNVxpRLg-3D-3DCWMw_wb3l=
+uKP73KVYI7TUfNTs5-2BdzuysSgZgcJRWnkaUmIhyxB8hNAcLszJnY23YO3DHrd9f6ve1It0bNd=
+DOqG5hXAaf21Ixk5peMrhIgmZbqJhILj3dPnIT4M0Gx326Zow-2BAE732qXckIdRuM4xlmjL3J7=
+ZQSCHvbDNBUA-2FN87wyQ8M-2BKh96XqMfsWCctmP7PqLwoWaiK5iXhjjQxiQW1uSM8aT6KZJOk=
+qbMzigXdTwfvjs-3D">Post SMTP</a></p>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                    <!-- End Footer -->
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    <img src=3D"https://u10493795.ct.sendgrid.net/wf/open?upn=3DPZ3rpdENalH=
+ahd95ubv4S6WCm-2Fj7-2FYlqwyXQOWRLhE0Ej3xknTdQz4uYjtRPXw42dwiBr-2FP9yvNT0ocI=
+gn6C6amJ6p7eZEY4cKM5ODCopojWS2PW8IRby3cLPVn02uF7fbPjKJ-2BL9m3Q3HrB0IselUVlj=
+KHFWwwJdVl3QJhMR1WdY8TUQGgBGjuFFriDcMS1aehKCF5O-2FyhENJUNwshmN-2BaKAkH93qav=
+dIK2ZakTTA4-3D" alt=3D"" width=3D"1" height=3D"1" border=3D"0" style=3D"hei=
+ght:1px !important;width:1px !important;border-width:0 !important;margin-to=
+p:0 !important;margin-bottom:0 !important;margin-right:0 !important;margin-=
+left:0 !important;padding-top:0 !important;padding-bottom:0 !important;padd=
+ing-right:0 !important;padding-left:0 !important;"/></body>
+</html>
